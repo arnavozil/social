@@ -16,14 +16,13 @@ app.get('/', async (req, res) => {
     const { u } = req.query;
     
     try {
-        const response = await await fetch(u, {
+        const response = await fetch(u, {
             "credentials": "include",
             "headers": {
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:82.0) Gecko/20100101 Firefox/82.0",
                 "Accept": "*/*",
                 "Accept-Language": "en-US,en;q=0.5"
             },
-            "referrer": "https://twitter.com/home",
             "method": "GET",
             "mode": "cors"
         });
